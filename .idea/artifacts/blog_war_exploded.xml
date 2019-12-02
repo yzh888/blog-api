@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="blog:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/blog_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="blog" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.12.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.48" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.6" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.22" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.12" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="blog/web/Web" />
+    </root>
+  </artifact>
+</component>

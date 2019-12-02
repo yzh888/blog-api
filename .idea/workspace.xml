@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="blog:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ef6ba93-9fb2-45f7-ba50-4e769c2c48ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/ArticleDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/ArticleDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="false" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - db_blog@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - db_blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="db_blog: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blog" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_jar" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.2" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TDyF99SGPiaq6Uocodr5w2199y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql.8&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.31149426" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.scs.web.blog.dao" />
+      <recent name="com.scs.web.blog.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.scs.web.blog.dao" />
+      <recent name="com.scs.web.blog.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\coding\blog\src\main\resources" />
+      <recent name="F:\coding\blog\src\main\webapp" />
+      <recent name="F:\coding\blog\src\main\java\com\scs\web\blog\controller" />
+      <recent name="F:\coding\blog\src\main\java\com\scs\web\blog\util" />
+      <recent name="F:\blog\src\main\java\com\scs\web\blog\util" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\blog\src\main\resources" />
+      <recent name="F:\blog\src\main\resources\aa" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/article.do" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.24">
+    <configuration name="JSoupSpider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scs.web.blog.util.JSoupSpider" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scs.web.blog.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scs.web.blog.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scs.web.blog.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.scs.web.blog.dao.ArticleDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleDaoTest.batchInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scs.web.blog.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scs.web.blog.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.scs.web.blog.dao.ArticleDaoTest" />
+      <option name="METHOD_NAME" value="batchInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicDaoTest.getTopic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scs.web.blog.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scs.web.blog.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.scs.web.blog.dao.TopicDaoTest" />
+      <option name="METHOD_NAME" value="getTopic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scs.web.blog.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.scs.web.blog.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.scs.web.blog.dao.UserDaoTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <deployment>
+        <artifact name="blog:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_blog_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59003" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="blog:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JSoupSpider" />
+      <item itemvalue="JUnit.TopicDaoTest.getTopic" />
+      <item itemvalue="JUnit.ArticleDaoTest" />
+      <item itemvalue="JUnit.ArticleDaoTest.batchInsert" />
+      <item itemvalue="JUnit.UserDaoTest.update" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.24" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserDaoTest.update" />
+        <item itemvalue="JUnit.ArticleDaoTest.batchInsert" />
+        <item itemvalue="Application.JSoupSpider" />
+        <item itemvalue="JUnit.ArticleDaoTest" />
+        <item itemvalue="JUnit.TopicDaoTest.getTopic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@859ea820" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@859ea820" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4da5ef9f" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ef6ba93-9fb2-45f7-ba50-4e769c2c48ac" name="Default Changelist" comment="" />
+      <created>1573008854384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573008854384</updated>
+      <workItem from="1573008856262" duration="3543000" />
+      <workItem from="1573084869787" duration="9857000" />
+      <workItem from="1573096299977" duration="27132000" />
+      <workItem from="1573301038974" duration="8578000" />
+      <workItem from="1573334539410" duration="2526000" />
+      <workItem from="1573339284089" duration="5622000" />
+      <workItem from="1573465279112" duration="22075000" />
+      <workItem from="1573689611211" duration="21895000" />
+      <workItem from="1573867782767" duration="27316000" />
+      <workItem from="1573992018557" duration="3717000" />
+      <workItem from="1573997816943" duration="15090000" />
+      <workItem from="1574014911312" duration="2771000" />
+      <workItem from="1574054852898" duration="20835000" />
+      <workItem from="1574098912644" duration="485000" />
+      <workItem from="1574102055604" duration="87000" />
+      <workItem from="1574102568220" duration="1196000" />
+      <workItem from="1574119902979" duration="1618000" />
+      <workItem from="1574121741336" duration="5982000" />
+      <workItem from="1574130916574" duration="14987000" />
+      <workItem from="1574169916527" duration="13486000" />
+      <workItem from="1574203447134" duration="13541000" />
+      <workItem from="1574263800543" duration="304000" />
+      <workItem from="1574294246388" duration="34570000" />
+      <workItem from="1574385983494" duration="28399000" />
+      <workItem from="1574469314689" duration="35509000" />
+      <workItem from="1574757175451" duration="2680000" />
+      <workItem from="1574760463565" duration="2260000" />
+      <workItem from="1574769471804" duration="598000" />
+      <workItem from="1575007525494" duration="1469000" />
+      <workItem from="1575010041879" duration="143000" />
+      <workItem from="1575084237402" duration="11521000" />
+      <workItem from="1575193646176" duration="1528000" />
+      <workItem from="1575244985774" duration="620000" />
+      <workItem from="1575245751796" duration="247000" />
+      <workItem from="1575246928457" duration="507000" />
+    </task>
+    <task id="LOCAL-00001" summary="blog项目，完成用户数据初始化和登录功能测试">
+      <created>1573274056873</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573274056873</updated>
+    </task>
+    <task id="LOCAL-00002" summary="blog项目，完成用户登录功能接口">
+      <created>1573287669356</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573287669357</updated>
+    </task>
+    <task id="LOCAL-00003" summary="blog项目，优化字符串常量">
+      <created>1573290627826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573290627826</updated>
+    </task>
+    <task id="LOCAL-00004" summary="blog项目，完成用户数据查询接口、文章数据查询接口">
+      <created>1573716575594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573716575594</updated>
+    </task>
+    <task id="LOCAL-00005" summary="blog项目重构，提交如下变更：&#10;1.全局统一的API枚举状态、信息，简化返回类型的编写&#10;2.将返回类型下沉到service层，处理各种异常情况&#10;3.将几个Servlet做了统一处理，以应对有多个get或put请求的情况，根据不同的URI来做分发&#10;4.完成热门用户、热门文章、热门专题的查询接口">
+      <created>1573915484108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573915484108</updated>
+    </task>
+    <task id="LOCAL-00006" summary="blog项目重构,各个接口的urlPatterns使用RESTful处理，完成图形验证码功能，修复这两天一个大坑：数据库连接池问题，暂时先在Tomcat里配置了MySQL">
+      <created>1574131104500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574131104500</updated>
+    </task>
+    <task id="LOCAL-00007" summary="blog项目，完成文章详情，专题详情接口，配合前端路径参数查询">
+      <created>1574403695704</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574403695704</updated>
+    </task>
+    <task id="LOCAL-00008" summary="blog项目，完成文章模糊搜索接口、文章分页接口">
+      <created>1574427464850</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574427464850</updated>
+    </task>
+    <task id="LOCAL-00009" summary="blog项目，完成如下内容：&#10;1.导航栏全局搜索，根据关键字可以进行专题、文章、用户分类按关键字检索，&#10;2.文章、专题、作者页面的分页">
+      <created>1574441207200</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574441207200</updated>
+    </task>
+    <task id="LOCAL-00010" summary="blog项目，全局搜索、分页优化、专题详情和文章详情">
+      <created>1574502596753</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574502596753</updated>
+    </task>
+    <task id="LOCAL-00011" summary="blog项目，完成如下内容：&#10;1.导航栏全局搜索，根据关键字可以进行专题、文章、用户分类按关键字检索，&#10;2.文章、专题、作者页面的分页">
+      <created>1575245248531</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575245248531</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../" />
+    </ignored-roots>
+    <MESSAGE value="blog项目，完成用户数据初始化和登录功能测试" />
+    <MESSAGE value="blog项目，完成用户登录功能接口" />
+    <MESSAGE value="blog项目，优化字符串常量" />
+    <MESSAGE value="blog项目，完成用户数据查询接口、文章数据查询接口" />
+    <MESSAGE value="blog项目重构，提交如下变更：&#10;1.全局统一的API枚举状态、信息，简化返回类型的编写&#10;2.将返回类型下沉到service层，处理各种异常情况&#10;3.将几个Servlet做了统一处理，以应对有多个get或put请求的情况，根据不同的URI来做分发&#10;4.完成热门用户、热门文章、热门专题的查询接口" />
+    <MESSAGE value="blog项目重构,各个接口的urlPatterns使用RESTful处理，完成图形验证码功能，修复这两天一个大坑：数据库连接池问题，暂时先在Tomcat里配置了MySQL" />
+    <MESSAGE value="blog项目，完成文章详情，专题详情接口，配合前端路径参数查询" />
+    <MESSAGE value="blog项目，完成文章模糊搜索接口、文章分页接口" />
+    <MESSAGE value="blog项目，全局搜索、分页优化、专题详情和文章详情" />
+    <MESSAGE value="blog项目，完成如下内容：&#10;1.导航栏全局搜索，根据关键字可以进行专题、文章、用户分类按关键字检索，&#10;2.文章、专题、作者页面的分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="blog项目，完成如下内容：&#10;1.导航栏全局搜索，根据关键字可以进行专题、文章、用户分类按关键字检索，&#10;2.文章、专题、作者页面的分页" />
+  </component>
+</project>
