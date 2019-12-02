@@ -78,4 +78,5 @@ public interface ArticleDao {
      * @throws SQLException
      */
     ArticleVo getArticle(long id) throws SQLException;
+
 }

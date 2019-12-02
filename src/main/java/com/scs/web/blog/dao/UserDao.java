@@ -22,6 +22,8 @@ public interface UserDao {
      */
     void insert(User user) throws SQLException;
 
+
+
     int update(long id, int iscare) throws SQLException;
 
     /**

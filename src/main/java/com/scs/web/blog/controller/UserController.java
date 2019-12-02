@@ -3,9 +3,12 @@ package com.scs.web.blog.controller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.scs.web.blog.domain.dto.UserDto;
+import com.scs.web.blog.entity.User;
+import com.scs.web.blog.factory.DaoFactory;
 import com.scs.web.blog.factory.ServiceFactory;
 import com.scs.web.blog.listener.MySessionContext;
 import com.scs.web.blog.service.UserService;
+import com.scs.web.blog.util.ResponseObject;
 import com.scs.web.blog.util.Result;
 import com.scs.web.blog.util.ResultCode;
 import org.slf4j.Logger;
@@ -13,13 +16,18 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 /**
- * @author
+ * @author yzh
  * @ClassName UserController
  * @Description 用户控制器
  * @Date 2019/11/9
@@ -96,7 +104,7 @@ public class UserController extends HttpServlet {
         } else if ("/api/user/check".equals(uri)) {
             check(req, resp);
         }else{
-            System.out.println("1");
+
             String id = req.getParameter("id");
             String ur = req.getRequestURI().trim();
             System.out.println(ur);
@@ -141,8 +149,41 @@ public class UserController extends HttpServlet {
     }
 
     private void signUp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("注册");
+        //请求字符集设置
+        req.setCharacterEncoding("UTF-8");
+        //接送客户端船体的Json数据，通过缓冲字符流按行读取，存入可变长字符串中
+        BufferedReader reader = req.getReader();
+        StringBuilder stringBuilder = new StringBuilder();
+        String line = null;
+        while((line = reader.readLine())!=null){
+            stringBuilder.append(line);
+        }
+        System.out.println(stringBuilder.toString());
+        //将接受到的客户端JSON字符串转成User对象
+        Gson gson = new GsonBuilder().create();
+        User user =gson.fromJson(stringBuilder.toString(),User.class);
+        //补全日期信息
+        user.setCreateTime(LocalDateTime.now());
+        //插入数据库，并返回该行主键
+        int id=0;
+        try {
+            DaoFactory.getUserDaoInstance().insert(user);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        //补全user的id字段信息
+        user.setId((long) id);
+        //通过response对象返回Json信息
+        resp.setContentType("application/json;charset=utf-8");
+        int code = resp.getStatus();
+        String msg = code == 200 ? "成功":"失败";
+        ResponseObject ro = ResponseObject.success(code,msg,user);
+        PrintWriter out = resp.getWriter();
+        out.print(gson.toJson(ro));
+        out.close();
     }
+
 
 
     private void update(HttpServletResponse resp,  long id, int iscare) throws ServletException, IOException {
