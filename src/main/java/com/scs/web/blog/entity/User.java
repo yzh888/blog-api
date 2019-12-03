@@ -36,4 +36,6 @@ public class User {
     private LocalDateTime createTime;
     private Short status;
     private Integer iscare;
+
+
 }
