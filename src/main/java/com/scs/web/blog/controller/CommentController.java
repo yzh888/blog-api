@@ -2,9 +2,9 @@ package com.scs.web.blog.controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.scs.web.blog.dao.CommentDao;
-import com.scs.web.blog.entity.Comment;
-import com.scs.web.blog.factory.DaoFactory;
+import com.scs.web.blog.domain.dto.CommentDto;
+import com.scs.web.blog.factory.ServiceFactory;
+import com.scs.web.blog.service.CommentService;
 import com.scs.web.blog.util.ResponseObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 
 /**
  * @author zh_yan
@@ -26,6 +25,7 @@ import java.sql.SQLException;
  * @Date 2019/12/3
  * @Version 1.0
  **/
+/*
 @WebServlet(urlPatterns = {"/api/comments","/api/comments/*"})
 public class CommentController extends HttpServlet {
     private static Logger logger = LoggerFactory.getLogger(CommentController.class);
@@ -35,8 +35,8 @@ public class CommentController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uri = req.getRequestURI().trim();
-        if ("/api/user/sign-up".equals(uri)) {
-            signUp(req, resp);
+        if ("/api/comments/con".equals(uri)) {
+            Connect(req, resp);
 
         }else{
 
@@ -47,7 +47,7 @@ public class CommentController extends HttpServlet {
         }
     }
 
-    private void signUp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+    private void Connect(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         //请求字符集设置
         req.setCharacterEncoding("UTF-8");
         //接送客户端船体的Json数据，通过缓冲字符流按行读取，存入可变长字符串中
@@ -90,4 +90,55 @@ public class CommentController extends HttpServlet {
 
 
 
+}
+*/
+@WebServlet(urlPatterns ={"/comment", "/comment/*"})
+public class CommentController extends HttpServlet {
+    private CommentService commentService = ServiceFactory.getCommentServiceInstance();
+    private Logger logger = LoggerFactory.getLogger(CommentController.class);
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String url = req.getRequestURI().trim();
+        if(url.equals("/comment")){
+            System.out.println("123");
+        }else {
+            System.out.println("12334");
+        }
+    }
+
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String url = req.getRequestURI().trim();
+        System.out.println(url);
+        if(url.equals("/comment")){
+            addComments(req, resp);
+        }
+    }
+
+    private void addComments(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        String line = null;
+        BufferedReader reader = req.getReader();
+        StringBuilder stringBuilder = new StringBuilder();
+        while ((line = reader.readLine()) != null){
+            stringBuilder.append(line);
+        }
+        logger.info("添加的评论信息:" + stringBuilder);
+
+        Gson gson = new GsonBuilder().create();
+        CommentDto cdo = gson.fromJson(stringBuilder.toString(), CommentDto.class);
+        int n = commentService.addArtComments(cdo);
+        ResponseObject ro = new ResponseObject();
+        ro.setCode(res.getStatus());
+        if(res.getStatus() == 200){
+            ro.setMsg("响应成功");
+        }else {
+            ro.setMsg("响应失败");
+        }
+        ro.setData(n);
+        PrintWriter out = res.getWriter();
+        out.print(gson.toJson(ro));
+        out.close();
+    }
 }

@@ -171,7 +171,25 @@ public class ArticleDaoImpl implements ArticleDao {
         return articleVo;
     }
 
+    @Override
+    public int updateComments(long articleId, int status) throws SQLException {
+        Connection connection = DbUtil.getConnection();
+        String sql = "UPDATE t_article SET comment_account = comment_account+1 WHERE id = ?";
+        String sql1 = "UPDATE t_article SET comment_account = comment_account-1 WHERE id = ?";
+        connection.setAutoCommit(false);
+        PreparedStatement pst = null;
+        if(status == 0){
+            pst = connection.prepareStatement(sql1);
+        }else {
+            pst = connection.prepareStatement(sql);
+        }
 
+        pst.setLong(1, articleId);
+        int n = pst.executeUpdate();
+        connection.commit();
+        DbUtil.close(connection, pst, null);
+        return n;
+    }
 
 
 }

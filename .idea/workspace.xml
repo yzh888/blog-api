@@ -7,19 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef6ba93-9fb2-45f7-ba50-4e769c2c48ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/CommentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/domain/dto/CommentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/domain/vo/CommentVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/impl/CommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/factory/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/factory/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/factory/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/factory/DaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/scs/web/blog/factory/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scs/web/blog/factory/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/ArticleDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/ArticleDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/CommentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/dao/impl/CommentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/domain/dto/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/domain/dto/CommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/factory/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/factory/ServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scs/web/blog/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/impl/ArticleDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/dao/impl/ArticleDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/factory/ServiceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scs/web/blog/factory/ServiceFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/ArticleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/impl/ArticleDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scs/web/blog/dao/impl/ArticleDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/scs/web/blog/factory/ServiceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/scs/web/blog/factory/ServiceFactory.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +68,8 @@
         <option value="HTML File" />
         <option value="Jsp File" />
         <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -435,7 +440,7 @@
       <workItem from="1575250360766" duration="1153000" />
       <workItem from="1575251871163" duration="12203000" />
       <workItem from="1575330579340" duration="7237000" />
-      <workItem from="1575339183370" duration="24611000" />
+      <workItem from="1575339183370" duration="28341000" />
     </task>
     <task id="LOCAL-00001" summary="blog项目，完成用户数据初始化和登录功能测试">
       <created>1573274056873</created>
@@ -542,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575358162888</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="初步完成留言功能和前端改造，留言功能仍有缺陷">
+      <created>1575386155444</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575386155444</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,6 +589,7 @@
     <MESSAGE value="blog项目，完成如下内容：&#10;1.导航栏全局搜索，根据关键字可以进行专题、文章、用户分类按关键字检索，&#10;2.文章、专题、作者页面的分页" />
     <MESSAGE value="完成基础布局以及登录注册功能，注册功能仍有缺陷" />
     <MESSAGE value="完善注册功能，优化登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善注册功能，优化登录功能" />
+    <MESSAGE value="初步完成留言功能和前端改造，留言功能仍有缺陷" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步完成留言功能和前端改造，留言功能仍有缺陷" />
   </component>
 </project>

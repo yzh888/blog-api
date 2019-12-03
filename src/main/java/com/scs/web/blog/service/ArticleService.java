@@ -2,6 +2,8 @@ package com.scs.web.blog.service;
 
 import com.scs.web.blog.util.Result;
 
+import java.sql.SQLException;
+
 /**
  * @author
  * @ClassName ArticleService
@@ -42,4 +44,5 @@ public interface ArticleService {
      * @return
      */
     Result selectByKeywords(String keywords);
+
 }
