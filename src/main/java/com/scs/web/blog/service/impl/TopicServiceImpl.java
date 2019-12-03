@@ -95,4 +95,20 @@ public class TopicServiceImpl implements TopicService {
             return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
         }
     }
+    @Override
+    public Result update(long id, int iscare) {
+        int userList =0;
+        try {
+            userList = topicDao.update(id,iscare);
+        } catch (SQLException e) {
+            logger.error("根据id查询用户是否关注出现异常");
+        }
+        if (userList != 0) {
+            return Result.success(userList);
+        }
+        else {
+            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
+        }
+
+    }
 }

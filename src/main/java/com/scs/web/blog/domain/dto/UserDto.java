@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * @author mq_xu
@@ -19,5 +20,6 @@ public class UserDto implements Serializable {
     private String nickname;
     private String gender;
     private LocalDate birthday;
+    private LocalDateTime createTime;
     private String code;
 }

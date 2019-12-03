@@ -29,6 +29,8 @@ public class UserServiceImpl implements UserService {
     private ArticleDao articleDao = DaoFactory.getArticleDaoInstance();
     private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
+
+
     @Override
     public Result signIn(UserDto userDto) {
         User user = null;
@@ -139,4 +141,26 @@ public class UserServiceImpl implements UserService {
         }
 
     }
+
+  /*  @Override
+    public Result singUp(User user) {
+        User user1 = null;
+        int n = 0;
+        try {
+           n = userDao.singUp(user);
+           *//* user1 = userDao.findUserByMobile(user.getMobile());*//*
+        } catch (SQLException e) {
+            logger.error("根据id查询用户出现异常");
+        }
+        if (user1 != null) {
+            return Result.success(n);
+        }
+        else {
+            return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
+        }
+
+    }
+*/
+
+
 }

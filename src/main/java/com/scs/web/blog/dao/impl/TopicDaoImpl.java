@@ -61,7 +61,21 @@ public class TopicDaoImpl implements TopicDao {
         DbUtil.close(connection, pst, rs);
         return topicList;
     }
-
+    @Override
+    public int update(long id, int iscare) throws SQLException {
+        Connection connection = DbUtil.getConnection();
+        String sql = "UPDATE t_topic SET iscare = ? WHERE id = ?";
+        PreparedStatement pst = connection.prepareStatement(sql);
+        if(iscare == 0) {
+            pst.setInt(1, 1);
+        }else{
+            pst.setInt(1, 0);
+        }
+        pst.setLong(2, id);
+       /* int n = pst.executeUpdate();
+        return n;*/
+        return pst.executeUpdate();
+    }
     @Override
     public List<Topic> selectHotTopics() throws SQLException {
         Connection connection = DbUtil.getConnection();

@@ -18,7 +18,8 @@ public interface UserService {
      * @return
      */
     Result signIn(UserDto userDto);
-
+    /*Result insert(User user);*/
+    /*Result singUp(User user);*/
     /**
      * 获取热门用户信息
      * @return

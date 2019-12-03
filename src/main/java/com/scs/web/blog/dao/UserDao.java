@@ -20,7 +20,7 @@ public interface UserDao {
      * @param user
      * @throws SQLException
      */
-    void insert(User user) throws SQLException;
+    int insert(User user) throws SQLException;
 
 
 
@@ -76,5 +76,6 @@ public interface UserDao {
      * @throws SQLException
      */
     List<User> selectByKeywords(String keywords) throws SQLException;
+
 
 }

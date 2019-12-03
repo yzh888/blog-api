@@ -41,4 +41,5 @@ public interface TopicService {
      * @return
      */
     Result selectByPage(int currentPage,int count);
+    Result update(long id,int iscare);
 }

@@ -26,4 +26,5 @@ public class Topic {
     private Integer articles;
     private Integer follows;
     private LocalDateTime createTime;
+    private Integer iscare;
 }

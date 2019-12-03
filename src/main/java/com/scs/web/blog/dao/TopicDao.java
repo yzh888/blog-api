@@ -22,7 +22,7 @@ public interface TopicDao {
      * @throws SQLException
      */
     void batchInsert(List<Topic> topicList) throws SQLException;
-
+    int update(long id, int iscare) throws SQLException;
     /**
      * 获取所有专题
      * @return

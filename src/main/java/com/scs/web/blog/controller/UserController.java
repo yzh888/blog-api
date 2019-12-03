@@ -24,7 +24,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 
 /**
  * @author yzh
@@ -148,7 +147,7 @@ public class UserController extends HttpServlet {
         resp.getWriter().println("验证账号");
     }
 
-    private void signUp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void signUp(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         //请求字符集设置
         req.setCharacterEncoding("UTF-8");
         //接送客户端船体的Json数据，通过缓冲字符流按行读取，存入可变长字符串中
@@ -162,12 +161,12 @@ public class UserController extends HttpServlet {
         //将接受到的客户端JSON字符串转成User对象
         Gson gson = new GsonBuilder().create();
         User user =gson.fromJson(stringBuilder.toString(),User.class);
-        //补全日期信息
-        user.setCreateTime(LocalDateTime.now());
+
+
         //插入数据库，并返回该行主键
         int id=0;
         try {
-            DaoFactory.getUserDaoInstance().insert(user);
+            id = DaoFactory.getUserDaoInstance().insert(user);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -183,7 +182,6 @@ public class UserController extends HttpServlet {
         out.print(gson.toJson(ro));
         out.close();
     }
-
 
 
     private void update(HttpServletResponse resp,  long id, int iscare) throws ServletException, IOException {

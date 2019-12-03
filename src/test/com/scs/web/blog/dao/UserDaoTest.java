@@ -39,4 +39,17 @@ public class UserDaoTest {
         int n = userDao.update(3, 0);
         System.out.println(n);
     }
+
+    @Test
+    public void singUp() throws SQLException {
+     /*   User user = new User();
+        user.setMobile("12321");
+        user.setPassword("123123");
+        user.setNickname("哈哈");
+        user.setBirthday(LocalDate.now());
+        user.setCreateTime(LocalDateTime.now());
+        user.setGender("nan");
+       int n = userDao.singUp(user);*/
+
+    }
 }
