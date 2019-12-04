@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author zh_yan
@@ -41,6 +42,18 @@ public class CommentServiceImpl implements CommentService {
             return Result.success(n);
         }
         return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
+    }
+
+
+    @Override
+    public List<Comment> listComment() {
+        List<Comment> comments = null;
+        try {
+            comments=commentDao.selectAll();
+        } catch (SQLException e) {
+            System.err.println("查询所有学生异常");
+        }
+        return comments;
     }
 
 

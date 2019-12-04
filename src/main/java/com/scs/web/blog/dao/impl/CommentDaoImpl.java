@@ -8,11 +8,9 @@ import com.scs.web.blog.util.DbUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,16 +40,38 @@ public class CommentDaoImpl implements CommentDao {
         return n;
     }
 
+
+
     @Override
-    public List<Comment> selectAll() throws SQLException {
+    public List<Comment> selectHotComments() throws SQLException {
         Connection connection = DbUtil.getConnection();
-        String sql = "SELECT * FROM t_comment ORDER BY id ";
+        String sql = "SELECT * FROM t_comment ORDER BY follows DESC LIMIT 8 ";
         PreparedStatement pst = connection.prepareStatement(sql);
         ResultSet rs = pst.executeQuery();
         List<Comment> commentList = BeanHandler.convertComment(rs);
         DbUtil.close(connection, pst, rs);
         return commentList;
     }
+    @Override
+    public List<Comment> selectAll() throws SQLException {
+        List<Comment> commentList = new ArrayList<>();
+        Connection connection = DbUtil.getConnection();
+        String sql = "SELECT * FROM t_comment ORDER BY id DESC ";
+        PreparedStatement pstmt = connection.prepareStatement(sql) ;
+        ResultSet rs = pstmt. executeQuery();
+        while (rs.next()) {
+            Comment comment = new Comment();
+            comment. setId(rs.getLong("id"));
+            comment. setNickname (rs.getString("nickname"));
+            comment. setContent(rs.getString("content"));
+            Timestamp timestamp = rs.getTimestamp("create_time");
+            comment.setCreateTime (timestamp.toLocalDateTime());
+            commentList.add(comment);
+        }
+        return commentList ;
+    }
+
+
 
 }
 /*

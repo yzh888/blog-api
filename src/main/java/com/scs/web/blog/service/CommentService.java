@@ -3,6 +3,8 @@ package com.scs.web.blog.service;
 import com.scs.web.blog.entity.Comment;
 import com.scs.web.blog.util.Result;
 
+import java.util.List;
+
 /**
  * @author zh_yan
  * @ClassName CommentService
@@ -19,6 +21,8 @@ public interface CommentService {
      */
     Result addArtComments(Comment comment);
 
+
+    List<Comment> listComment();
     /**
      * 根据文章id查询所有评论信息
      * @param id
