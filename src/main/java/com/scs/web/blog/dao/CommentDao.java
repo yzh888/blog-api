@@ -1,7 +1,6 @@
 package com.scs.web.blog.dao;
 
-import com.scs.web.blog.domain.dto.CommentDto;
-import com.scs.web.blog.domain.vo.CommentVo;
+import com.scs.web.blog.entity.Comment;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -25,21 +24,10 @@ public interface CommentDao {
        * @return
        * @throws SQLException
        */
-      int AddComments (CommentDto commentDto) throws SQLException;
+    /*  int AddComments (CommentDto commentDto) throws SQLException;*/
 
-      /**
-       * 根据文章id查询该文章的评论
-       * @param articleId
-       * @return
-       * @throws SQLException
-       */
+      int insert(Comment user) throws SQLException;
+      List<Comment> selectAll() throws SQLException;
 
 
-      /**
-       * 根据用户id得到评论信息
-       * @param userId
-       * @return
-       * @throws SQLException
-       */
-      List<CommentVo> getCommentByUserId(long userId) throws SQLException;
 }

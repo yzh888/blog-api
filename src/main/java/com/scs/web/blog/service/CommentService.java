@@ -1,6 +1,7 @@
 package com.scs.web.blog.service;
 
-import com.scs.web.blog.domain.dto.CommentDto;
+import com.scs.web.blog.entity.Comment;
+import com.scs.web.blog.util.Result;
 
 /**
  * @author zh_yan
@@ -16,7 +17,7 @@ public interface CommentService {
      * @param commentDto
      * @return
      */
-    int addArtComments(CommentDto commentDto);
+    Result addArtComments(Comment comment);
 
     /**
      * 根据文章id查询所有评论信息

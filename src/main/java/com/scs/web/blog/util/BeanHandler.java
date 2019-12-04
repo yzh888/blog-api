@@ -2,6 +2,7 @@ package com.scs.web.blog.util;
 
 import com.scs.web.blog.domain.vo.ArticleVo;
 import com.scs.web.blog.entity.Article;
+import com.scs.web.blog.entity.Comment;
 import com.scs.web.blog.entity.Topic;
 import com.scs.web.blog.entity.User;
 import org.slf4j.Logger;
@@ -115,4 +116,28 @@ public class BeanHandler {
         }
         return articleVoList;
     }
+
+    public static List<Comment> convertComment(ResultSet rs) {
+        List<Comment> commentList = new ArrayList<>();
+        try {
+            while (rs.next()) {
+                Comment comment = new Comment();
+                comment.setId(rs.getLong("id"));
+
+                comment.setNickname(rs.getString("nickname"));
+                comment.setUserId(rs.getLong("user_id"));
+                comment.setArticleId(rs.getLong("article_id"));
+                comment.setContent(rs.getString("content"));
+                comment.setCreateTime(rs.getTimestamp("create_time").toLocalDateTime());
+
+
+                commentList.add(comment);
+            }
+        } catch (SQLException e) {
+            logger.error("留言数据结果集解析产生异常");
+        }
+        return commentList;
+    }
+
+
 }

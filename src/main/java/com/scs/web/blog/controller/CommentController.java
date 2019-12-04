@@ -2,10 +2,12 @@ package com.scs.web.blog.controller;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.scs.web.blog.domain.dto.CommentDto;
+import com.scs.web.blog.dao.CommentDao;
+import com.scs.web.blog.entity.Comment;
+import com.scs.web.blog.factory.DaoFactory;
 import com.scs.web.blog.factory.ServiceFactory;
 import com.scs.web.blog.service.CommentService;
-import com.scs.web.blog.util.ResponseObject;
+import com.scs.web.blog.util.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,11 +27,25 @@ import java.io.PrintWriter;
  * @Date 2019/12/3
  * @Version 1.0
  **/
-/*
+
 @WebServlet(urlPatterns = {"/api/comments","/api/comments/*"})
 public class CommentController extends HttpServlet {
     private static Logger logger = LoggerFactory.getLogger(CommentController.class);
     private CommentDao commentDao = DaoFactory.getCommentDaoInstance();
+    private CommentService commentService = ServiceFactory.getCommentServiceInstance();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String uri = req.getRequestURI().trim();
+        if ("/api/comments/con".equals(uri)) {
+            Connect(req, resp);
+
+        }
+    }
+
+
+
+
 
 
     @Override
@@ -37,12 +53,6 @@ public class CommentController extends HttpServlet {
         String uri = req.getRequestURI().trim();
         if ("/api/comments/con".equals(uri)) {
             Connect(req, resp);
-
-        }else{
-
-            String id = req.getParameter("id");
-            String ur = req.getRequestURI().trim();
-
 
         }
     }
@@ -62,24 +72,14 @@ public class CommentController extends HttpServlet {
         Gson gson = new GsonBuilder().create();
         Comment user =gson.fromJson(stringBuilder.toString(),Comment.class);
 
+        System.out.println(user);
 
         //插入数据库，并返回该行主键
-        int id=0;
-        try {
-            id = DaoFactory.getCommentDaoInstance().insert(user);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        Result rs = commentService.addArtComments(user);
         //补全user的id字段信息
-        user.setId((long) id);
         //通过response对象返回Json信息
-        resp.setContentType("application/json;charset=utf-8");
-        int code = resp.getStatus();
-        String msg = code == 200 ? "成功":"失败";
-        ResponseObject ro = ResponseObject.success(code,msg,user);
         PrintWriter out = resp.getWriter();
-        out.print(gson.toJson(ro));
+        out.print(gson.toJson(rs));
         out.close();
     }
 
@@ -91,11 +91,13 @@ public class CommentController extends HttpServlet {
 
 
 }
-*/
+
+/*
 @WebServlet(urlPatterns ={"/comment", "/comment/*"})
 public class CommentController extends HttpServlet {
     private CommentService commentService = ServiceFactory.getCommentServiceInstance();
     private Logger logger = LoggerFactory.getLogger(CommentController.class);
+    private CommentDao commentDao= DaoFactory.getCommentDaoInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String url = req.getRequestURI().trim();
@@ -124,7 +126,7 @@ public class CommentController extends HttpServlet {
         while ((line = reader.readLine()) != null){
             stringBuilder.append(line);
         }
-        logger.info("添加的评论信息:" + stringBuilder);
+       logger.info("添加的评论信息:" + stringBuilder);
 
         Gson gson = new GsonBuilder().create();
         CommentDto cdo = gson.fromJson(stringBuilder.toString(), CommentDto.class);
@@ -132,13 +134,21 @@ public class CommentController extends HttpServlet {
         ResponseObject ro = new ResponseObject();
         ro.setCode(res.getStatus());
         if(res.getStatus() == 200){
-            ro.setMsg("响应成功");
+            ro.setMsg("成功");
         }else {
-            ro.setMsg("响应失败");
+            ro.setMsg("失败");
         }
         ro.setData(n);
+
+        */
+/*int code = resp.getStatus();
+        String msg = code == 200 ? "成功":"失败";
+        ResponseObject ro = ResponseObject.success(code,msg,commentDao);*//*
+
         PrintWriter out = res.getWriter();
         out.print(gson.toJson(ro));
         out.close();
     }
-}
+
+
+*/

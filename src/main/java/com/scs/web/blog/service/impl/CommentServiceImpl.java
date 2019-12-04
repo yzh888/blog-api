@@ -3,8 +3,7 @@ package com.scs.web.blog.service.impl;
 import com.scs.web.blog.dao.ArticleDao;
 import com.scs.web.blog.dao.CommentDao;
 import com.scs.web.blog.dao.UserDao;
-import com.scs.web.blog.domain.dto.CommentDto;
-import com.scs.web.blog.domain.vo.CommentVo;
+import com.scs.web.blog.entity.Comment;
 import com.scs.web.blog.factory.DaoFactory;
 import com.scs.web.blog.service.CommentService;
 import com.scs.web.blog.util.Result;
@@ -13,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
-import java.util.List;
+import java.time.LocalDateTime;
 
 /**
  * @author zh_yan
@@ -28,22 +27,20 @@ public class CommentServiceImpl implements CommentService {
     private CommentDao commentDao = DaoFactory.getCommentDaoInstance();
     private Logger logger = LoggerFactory.getLogger(CommentService.class);
     @Override
-    public int addArtComments(CommentDto commentDto) {
+    public Result addArtComments(Comment comment) {
         int n = 0;
         try {
-            n = commentDao.AddComments(commentDto);
+            comment.setCreateTime(LocalDateTime.now());
+            n = commentDao.insert(comment);
+
+            System.out.println(n);
         } catch (SQLException e) {
             logger.error("评论内容添加失败");
         }
         if(n != 0){
-            try {
-                n = articleDao.updateComments(commentDto.getArticleId(), commentDto.getStatus());
-            } catch (SQLException e) {
-                logger.error("用户评论量更新异常");
-            }
-            return n;
+            return Result.success(n);
         }
-        return n;
+        return Result.failure(ResultCode.RESULT_CODE_DATA_NONE);
     }
 
 
